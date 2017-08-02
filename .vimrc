@@ -8,6 +8,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end()            " required
@@ -36,6 +37,9 @@ set shiftround
 set expandtab
 
 let mapleader="\<Space>"
+
+nnoremap <leader>pi :PluginInstall<CR>
+nnoremap <leader>pu :PluginUpdate<CR>
 
 " Move by visual lines
 nnoremap j gj
