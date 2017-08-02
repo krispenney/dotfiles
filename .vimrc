@@ -16,10 +16,26 @@ filetype plugin indent on
 set runtimepath+=~/.vim_runtime
 set relativenumber
 set number
-set expandtab
-set shiftwidth=2
-set softtabstop=2
 set colorcolumn=121
+
+set autowrite     " Automatically :write before running commands
+set autoread      " Reload files changed outside vim
+" Trigger autoread when changing buffers or coming back to vim in terminal.
+au FocusGained,BufEnter * :silent! !
+
+set guifont=Inconsolata\ for\ Powerline:h24
+
+"Allow usage of mouse in iTerm
+set ttyfast
+set mouse=a
+
+" Softtabs, 2 spaces
+set tabstop=2
+set shiftwidth=2
+set shiftround
+set expandtab
+
+let mapleader="\<Space>"
 
 " Move by visual lines
 nnoremap j gj
@@ -33,10 +49,26 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
+"Use enter to create new lines w/o entering insert mode
+nnoremap <CR> o<Esc>
+
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" Use tab to jump between blocks, because it's easier
+nnoremap <tab> %
+vnoremap <tab> %
+
+""" SYSTEM CLIPBOARD COPY & PASTE SUPPORT
+set pastetoggle=<F2> "F2 before pasting to preserve indentation
+"Copy paste to/from clipboard
+vnoremap <C-c> "*y
+map <silent><Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>"
+map <silent><Leader><S-p> :set paste<CR>O<esc>"*]p:set nopaste<cr>"
+
 " Normal mode on jk
 imap jk <esc>
 
-let mapleader="\<Space>"
 
 nnoremap <leader>ggb :Git branch<space>
 nnoremap <leader>ggc :Git checkout<space>
@@ -61,8 +93,3 @@ source ~/.vim_runtime/vimrcs/basic.vim
 source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
-
-try
-source ~/.vim_runtime/my_configs.vim
-catch
-endtry
