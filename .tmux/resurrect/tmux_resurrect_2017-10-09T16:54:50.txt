@@ -1,0 +1,6 @@
+pane	0	0	:~/git/shopify	1	:*	0	:/Users/krispenney/git/shopify	0	vim	:vim
+pane	0	0	:~/git/shopify	1	:*	1	:/Users/krispenney/git/shopify	1	zsh	:
+pane	0	0	:~/git/shopify	1	:*	2	:/Users/krispenney/git/shopify	0	vim	:vim
+pane	0	0	:~/git/shopify	1	:*	3	:/Users/krispenney/git/shopify	0	vim	:vim
+window	0	0	1	:*	0be6,238x64,0,0{119x64,0,0[119x33,0,0,20,119x30,0,34,55],118x64,120,0[118x33,120,0,54,118x30,120,34,56]}
+state	0	
