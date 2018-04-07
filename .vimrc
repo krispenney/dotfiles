@@ -24,8 +24,6 @@ if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
 
-set termguicolors
-
 set autowrite     " Automatically :write before running commands
 set autoread      " Reload files changed outside vim
 " Trigger autoread when changing buffers or coming back to vim in terminal.
