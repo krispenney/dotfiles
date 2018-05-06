@@ -1,5 +1,7 @@
 # dotfiles
 
+Credit for setup scripts goes to [colbycheeze](https://github.com/colbycheeze/dotfiles)
+
 ## Downloads
 - [iTerm](https://www.iterm2.com)
 - [Awesome Vimrc](https://github.com/amix/vimrc)
@@ -13,7 +15,7 @@
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-- Install Homebrew: 
+- Install Homebrew:
 ```
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
