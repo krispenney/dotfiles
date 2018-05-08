@@ -19,5 +19,5 @@ done
 
 echo "Symlink new files"
 for i in ${dotfiles[@]} ; do
-  ln -s ~/dotfiles/$i ~/.$i
+  ln -nsf ~/dotfiles/$i ~/.$i
 done
