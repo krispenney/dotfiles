@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 dotfiles=(
 gitconfig
 tmux.conf
@@ -8,6 +7,10 @@ zshrc
 vimrc
 vim
 )
+
+echo "Loading package managers..."
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Backing up current configuration..."
 today=`date +%Y%m%d`
