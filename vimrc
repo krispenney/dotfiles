@@ -18,11 +18,12 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'rust-lang/rust.vim'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'jparise/vim-graphql'
-Plug 'elixir-editors/vim-elixir'
+Plug 'vim-test/vim-test'
+" Plug 'elixir-editors/vim-elixir'
 " Plug 'dense-analysis/ale'
 
-" Plug 'leafgarland/typescript-vim'
-" Plug 'peitalin/vim-jsx-typescript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 Plug 'fatih/vim-go'
@@ -33,7 +34,7 @@ filetype plugin indent on
 syntax on
 set termguicolors
 colorscheme onehalfdark
-let g:airline_theme='onehalflight'
+" let g:airline_theme='onehalflight'
 " color dracula
 
 set relativenumber
@@ -215,6 +216,7 @@ let g:rustfmt_autosave = 1
 "nmap <silent><leader>afr :ALEFindReferences<CR>
 "nmap <silent><leader>afa :ALEFix<CR>
 " GoTo code navigation.
+let g:coc_node_path = '/usr/local/bin/node'
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -244,3 +246,11 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" vimtest
+let test#strategy = "neovim"
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
