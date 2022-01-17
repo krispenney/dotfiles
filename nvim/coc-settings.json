@@ -1,0 +1,12 @@
+{
+  "languageserver": {
+    "sorbet": {
+      "command": "bundle",
+      "args": ["exec", "srb", "tc", "--lsp"],
+      "filetypes": ["ruby"],
+      "rootPatterns": ["sorbet/config"],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  }
+}
